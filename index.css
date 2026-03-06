@@ -1,0 +1,118 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    height: 600px; 
+    margin: 0 auto;
+}
+
+
+form {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 15px;
+    background-color: #f9f9f9;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+form input[type="color"], form select, form button {
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form input[type="color"] {
+    width: 50px;
+    padding: 0;
+}
+
+form select, form button {
+    padding: 0 15px;
+}
+
+
+.display {
+    display: flex;
+    flex: 1; 
+    width: 100%;
+}
+
+
+.color-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1; 
+}
+
+.color-block {
+    flex: 1; 
+    width: 100%;
+}
+
+
+.color-hex {
+    text-align: center;
+    padding: 15px 0;
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+    background-color: white;
+}
+
+.color-hex {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.color-hex:hover {
+    background-color: #f0f0f0; 
+    text-decoration: underline;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
